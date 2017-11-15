@@ -43,7 +43,7 @@ function New-FileElement
     {
         $name = Split-Path -Leaf -Path $File
         $null = $fileElement = $XmlDoc.CreateElement("file")
-        New-Attribute -Name 'file' -value $file -Element $fileElement
+        New-Attribute -Name 'src' -value $file -Element $fileElement
         New-Attribute -Name 'signType' -value $SignType -Element $fileElement
         New-Attribute -Name 'dest' -value "__OUTPATHROOT__\$name" -Element $fileElement
         $null = $job.AppendChild($fileElement)   
