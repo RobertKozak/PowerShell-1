@@ -68,3 +68,5 @@ foreach($file in $AuthenticodeFiles)
 }
 
 $signingXml.Save($path)
+$updateScriptPath = Join-Path -Path $PSScriptRoot -ChildPath 'updateSigning.ps1'
+& $updateScriptPath -SigningXmlPath $path
