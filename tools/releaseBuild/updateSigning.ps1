@@ -1,3 +1,6 @@
+param(
+    [string] $SigningXmlPath = (Join-Path -Path $PSScriptRoot  -ChildPath 'signing.xml')
+)
 # Script for use in VSTS to update signing.xml
 
 # Parse the signing xml
