@@ -4,7 +4,6 @@ param(
 # Script for use in VSTS to update signing.xml
 
 # Parse the signing xml
-$signingXmlPath = Join-Path -Path $PSScriptRoot  -ChildPath 'signing.xml'
 $signingXml = [xml](Get-Content $signingXmlPath)
 
 # Get any variables to updating 'signType' in the XML
